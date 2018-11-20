@@ -1,2 +1,2 @@
-# Trivago-Assignment
+# Assignment
 Task I – Test Automation
