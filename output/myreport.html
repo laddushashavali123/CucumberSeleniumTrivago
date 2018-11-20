@@ -35,7 +35,6 @@
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
 				<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1)" view='testrunner-logs-view'><i class='material-icons'>note</i></a></li>
 		</ul>
@@ -50,7 +49,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Nov 20, 2018 09:14:14 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Nov 20, 2018 10:37:39 PM</span>
 				</a>
 			</li>
 			<li>
@@ -76,8 +75,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -145,10 +142,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>3</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -160,10 +157,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>3</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -175,10 +172,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='84.615%'><span class='strong'>22</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>26</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='3.846%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='11.538%'>3</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -192,21 +189,21 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Contact Feature</span>
-						<span class='test-time'>Nov 20, 2018 09:14:15 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Nov 20, 2018 10:37:39 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 2m 8s+541ms</span>
+<div class='scenariooutline node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 1m 43s+321ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">Customer to send the Query in Contact form and validate whether he is able to send the Query</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario fail' status='fail'>
+		<li test-id='3' class='node scenario pass' status='pass'>
 			<div class='category-list'>
 				<span class='category label white-text'>@contact</span>
 				<span class='category label white-text'>@contactTag</span>
@@ -216,74 +213,49 @@
 			
 			<span class="bdd-step-name">Customer to send the Query in Contact form and validate whether he is able to send the Query</span>
 				<div class='pre'>Scenario: Customer to send the Query in Contact form and validate whether he is able to send the Query</div>
-				<div class='pre'>Scenario: Customer to send the Query in Contact form and validate whether he is able to send the Query</div>
-				<div class='pre'>Scenario: Customer to send the Query in Contact form and validate whether he is able to send the Query</div>
-				<div class='pre'>Scenario: Customer to send the Query in Contact form and validate whether he is able to send the Query</div>
 			
 				<ul class='steps'>
 					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
 						<span class="bdd-step-name">Given Contact is visible</span>
 							<div class='pre'>Contact Link in the application</div>
-							<div class='pre'><a href='./screenshots/screenshot4271513360541991550.png'>ContactVisible</a></div>
+							<div class='pre'><a href='./screenshots/screenshot2737909447552728377.png'>ContactVisible</a></div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='5' class='node when pass' status='pass'><b>When</b>
 						<span class="bdd-step-name">When I click Contact</span>
 							<div class='pre'>Click Contact Link in the application</div>
-							<div class='pre'><a href='./screenshots/screenshot5310521616579429107.png'>ClickContact</a></div>
+							<div class='pre'><a href='./screenshots/screenshot788569581819715842.png'>ClickContact</a></div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='6' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I see the appropriate fields</span>
 							<div class='pre'>Verify Fields in Contact Form in the application</div>
-							<div class='pre'><a href='./screenshots/screenshot6527460239275434749.png'>VerifyFields</a></div>
+							<div class='pre'><a href='./screenshots/screenshot8621206399741070206.png'>VerifyFields</a></div>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='7' class='node when fail' status='fail'><b>When</b>
+					<li test-id='7' class='node when pass' status='pass'><b>When</b>
 						<span class="bdd-step-name">When I enter This is a test message,LADDU SHASHAVALI,shasha.intell@gmail.com data</span>
 							<div class='pre'>Enter Fields in Contact Form in the application</div>
-							<div class='pre'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //textarea[@class='contact-msg']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'EPPLGDAW0090', ip: '192.168.0.129', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 63.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 24364, moz:profile: C:\Users\Laddu_Shashavali\A..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
-*** Element info: {Using=xpath, value=//textarea[@class='contact-msg']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy20.clear(Unknown Source)
-	at com.test.trivago.pageObjects.Contact.enterDataContactDetails(Contact.java:69)
-	at com.test.trivago.stepdefinitions.ContactSteps.i_enter_and_data(ContactSteps.java:55)
-	at ✽.When I enter This is a test message,LADDU SHASHAVALI,shasha.intell@gmail.com data(Contact.feature:9)
-</pre></div>
+							<div class='pre'><a href='./screenshots/screenshot3800030906696207248.png'>EnterFields</a></div>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='8' class='node and skip' status='skip'><b>And</b>
+					<li test-id='8' class='node and pass' status='pass'><b>And</b>
 						<span class="bdd-step-name">And I check the Confirm checkbox</span>
-							<div class='pre'>skipped</div>
+							<div class='pre'>Click cpnfirm button in the application</div>
+							<div class='pre'><a href='./screenshots/screenshot5021129740729672751.png'>ClickConfirm</a></div>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='9' class='node and skip' status='skip'><b>And</b>
+					<li test-id='9' class='node and pass' status='pass'><b>And</b>
 						<span class="bdd-step-name">And I click Submit button</span>
-							<div class='pre'>skipped</div>
+							<div class='pre'>Click submit button in the application</div>
+							<div class='pre'><a href='./screenshots/screenshot7225415071551407879.png'>ClickSubmit</a></div>
+							<div class='pre'>passed</div>
 					</li>
-					<li test-id='10' class='node then skip' status='skip'><b>Then</b>
+					<li test-id='10' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I see the success message Message Sent Successfully!</span>
-							<div class='pre'>skipped</div>
-							<div class='pre'><a href='./screenshots/screenshot6259748463499289205.png'>TestFail</a></div>
+							<div class='pre'>Success message in the application</div>
+							<div class='pre'><a href='./screenshots/screenshot3625203871668970283.png'>SuccessMessage</a></div>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
@@ -296,7 +268,7 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='11'>
 					<div class='test-heading'>
 						<span class='test-name'>Destination Feature</span>
-						<span class='test-time'>Nov 20, 2018 09:16:28 PM</span>
+						<span class='test-time'>Nov 20, 2018 10:39:26 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -304,7 +276,7 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 	<div class='category-list'>
 		<span class='category label white-text'>@destination</span>
 	</div>
-	<span class='duration right label'>0h 2m 20s+800ms</span>
+	<span class='duration right label'>0h 1m 8s+396ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Search Destination from topleft Menu and validate the search results</span>
@@ -316,7 +288,7 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 			
 			<span class="bdd-step-name">Given topleftIcon is visible</span>
 				<div class='pre'>Top left Icon in the application</div>
-				<div class='pre'><a href='./screenshots/screenshot3223465526363978314.png'>TopleftIcon</a></div>
+				<div class='pre'><a href='./screenshots/screenshot4760542583788428353.png'>TopleftIcon</a></div>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -326,7 +298,7 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 			
 			<span class="bdd-step-name">When I click topleftIcon</span>
 				<div class='pre'>Click Topleft Icon in the application</div>
-				<div class='pre'><a href='./screenshots/screenshot5779074467675654583.png'>ClickIcon</a></div>
+				<div class='pre'><a href='./screenshots/screenshot732369508863340653.png'>ClickIcon</a></div>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -336,7 +308,7 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 			
 			<span class="bdd-step-name">Then I see Destination menu</span>
 				<div class='pre'>Destination Menu in the application</div>
-				<div class='pre'><a href='./screenshots/screenshot8964055546355812203.png'>VerifyMenu</a></div>
+				<div class='pre'><a href='./screenshots/screenshot8884869519248785937.png'>VerifyMenu</a></div>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -346,7 +318,7 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 			
 			<span class="bdd-step-name">When I click DestinationMenu item</span>
 				<div class='pre'>Destination Menu Item is clicked in the application</div>
-				<div class='pre'><a href='./screenshots/screenshot9045390966797806249.png'>ClickMenuItem</a></div>
+				<div class='pre'><a href='./screenshots/screenshot5928429773551009013.png'>ClickMenuItem</a></div>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -356,7 +328,7 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 			
 			<span class="bdd-step-name">Then I see DestinationSubMenu item</span>
 				<div class='pre'>Destination SubMenu Item is visible in the application</div>
-				<div class='pre'><a href='./screenshots/screenshot3389569411021855725.png'>ClickSubMenuItem</a></div>
+				<div class='pre'><a href='./screenshots/screenshot5473159436283852000.png'>ClickSubMenuItem</a></div>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -366,7 +338,7 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 			
 			<span class="bdd-step-name">When I click DestinationSubMenu item</span>
 				<div class='pre'>Destination SubMenu Item is clicked in the application</div>
-				<div class='pre'><a href='./screenshots/screenshot1997752106534787087.png'>ClickSubMenuItem</a></div>
+				<div class='pre'><a href='./screenshots/screenshot7698329979848719769.png'>ClickSubMenuItem</a></div>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -376,10 +348,10 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 			
 			<span class="bdd-step-name">Then I see destination results</span>
 			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="./screenshots/screenshot4358969466500143181.png"><i class='material-icons'>panorama</i></a></li>
+				<li><a data-featherlight="image" href="./screenshots/screenshot6360711201358900437.png"><i class='material-icons'>panorama</i></a></li>
 			</ul>
 				<div class='pre'>Destination results in the application</div>
-				<div class='pre'><a href='./screenshots/screenshot2824459653592239833.png'>DestinationResults</a></div>
+				<div class='pre'><a href='./screenshots/screenshot6343749986650206616.png'>DestinationResults</a></div>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -389,10 +361,10 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 			
 			<span class="bdd-step-name">And I verify destination results</span>
 			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="./screenshots/screenshot609282373614361075.png"><i class='material-icons'>panorama</i></a></li>
+				<li><a data-featherlight="image" href="./screenshots/screenshot5923338814161481775.png"><i class='material-icons'>panorama</i></a></li>
 			</ul>
 				<div class='pre'>Validate Destination results in the application</div>
-				<div class='pre'><a href='./screenshots/screenshot4110215839729135124.png'>ValidateDestinationResults</a></div>
+				<div class='pre'><a href='./screenshots/screenshot2631305560982719183.png'>ValidateDestinationResults</a></div>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -405,12 +377,12 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='21'>
 					<div class='test-heading'>
 						<span class='test-name'>Home Page Search Feature</span>
-						<span class='test-time'>Nov 20, 2018 09:19:01 PM</span>
+						<span class='test-time'>Nov 20, 2018 10:40:36 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='22' status='pass'>
-	<span class='duration right label'>0h 1m 42s+180ms</span>
+	<span class='duration right label'>0h 0m 34s+24ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">Search Destination in Search Icon and validate the results</span>
@@ -426,42 +398,39 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 			
 			<span class="bdd-step-name">Search Destination in Search Icon and validate the results</span>
 				<div class='pre'>Scenario: Search Destination in Search Icon and validate the results</div>
-				<div class='pre'>Scenario: Search Destination in Search Icon and validate the results</div>
-				<div class='pre'>Scenario: Search Destination in Search Icon and validate the results</div>
-				<div class='pre'>Scenario: Search Destination in Search Icon and validate the results</div>
 			
 				<ul class='steps'>
 					<li test-id='24' class='node given pass' status='pass'><b>Given</b>
 						<span class="bdd-step-name">Given Search button is visible</span>
 						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="./screenshots/screenshot1196503199712041668.png"><i class='material-icons'>panorama</i></a></li>
+							<li><a data-featherlight="image" href="./screenshots/screenshot2406863709883453211.png"><i class='material-icons'>panorama</i></a></li>
 						</ul>
 							<div class='pre'>Search Icon or button is Visible</div>
-							<div class='pre'><a href='./screenshots/screenshot8213854351728740255.png'>SearchIcon</a></div>
+							<div class='pre'><a href='./screenshots/screenshot8410393288477420340.png'>SearchIcon</a></div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='25' class='node when pass' status='pass'><b>When</b>
 						<span class="bdd-step-name">When I see search icon enabled</span>
 							<div class='pre'>Click on Search icon</div>
-							<div class='pre'><a href='./screenshots/screenshot5046248439229608187.png'>ClickSearchIcon</a></div>
+							<div class='pre'><a href='./screenshots/screenshot2917824079131271717.png'>ClickSearchIcon</a></div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='26' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I enter Europe in the search field</span>
 							<div class='pre'>Enter data to search</div>
-							<div class='pre'><a href='./screenshots/screenshot742774001510537258.png'>EnterData</a></div>
+							<div class='pre'><a href='./screenshots/screenshot6447098204197772961.png'>EnterData</a></div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='27' class='node when pass' status='pass'><b>When</b>
 						<span class="bdd-step-name">When I click on search</span>
 							<div class='pre'>Click on Search button to see the results</div>
-							<div class='pre'><a href='./screenshots/screenshot3277734445497865731.png'>ClickSearchButton</a></div>
+							<div class='pre'><a href='./screenshots/screenshot7881881624804823886.png'>ClickSearchButton</a></div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='28' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I see the search results</span>
 							<div class='pre'>Validating the results in the application</div>
-							<div class='pre'><a href='./screenshots/screenshot1085881028513859581.png'>SearchResults</a></div>
+							<div class='pre'><a href='./screenshots/screenshot3086997552980361991.png'>SearchResults</a></div>
 							<div class='pre'>passed</div>
 					</li>
 				</ul>
@@ -475,12 +444,12 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='29'>
 					<div class='test-heading'>
 						<span class='test-name'>Subscribe Feature</span>
-						<span class='test-time'>Nov 20, 2018 09:20:56 PM</span>
+						<span class='test-time'>Nov 20, 2018 10:41:13 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='30' status='pass'>
-	<span class='duration right label'>0h 1m 58s+640ms</span>
+	<span class='duration right label'>0h 0m 57s+987ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">Subscribe for NewsLetter and validate the success message</span>
@@ -496,15 +465,12 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 			
 			<span class="bdd-step-name">Subscribe for NewsLetter and validate the success message</span>
 				<div class='pre'>Scenario: Subscribe for NewsLetter and validate the success message</div>
-				<div class='pre'>Scenario: Subscribe for NewsLetter and validate the success message</div>
-				<div class='pre'>Scenario: Subscribe for NewsLetter and validate the success message</div>
-				<div class='pre'>Scenario: Subscribe for NewsLetter and validate the success message</div>
 			
 				<ul class='steps'>
 					<li test-id='32' class='node given pass' status='pass'><b>Given</b>
 						<span class="bdd-step-name">Given Subscribe is visible</span>
 						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="./screenshots/screenshot3813096473797490699.png"><i class='material-icons'>panorama</i></a></li>
+							<li><a data-featherlight="image" href="./screenshots/screenshot9001107122852875931.png"><i class='material-icons'>panorama</i></a></li>
 						</ul>
 							<div class='pre'>Subscribe is visible in the application</div>
 							<div class='pre'>passed</div>
@@ -512,31 +478,31 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 					<li test-id='33' class='node when pass' status='pass'><b>When</b>
 						<span class="bdd-step-name">When I see the appropriate fields in subscribe</span>
 							<div class='pre'>Appropriate fields are visible in the application</div>
-							<div class='pre'><a href='./screenshots/screenshot6849657463387651618.png'>FieldSubscribe</a></div>
+							<div class='pre'><a href='./screenshots/screenshot4234707163846612057.png'>FieldSubscribe</a></div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='34' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I enter email shasha.intell@gmail.com data</span>
 							<div class='pre'>Eneter email in the application</div>
-							<div class='pre'><a href='./screenshots/screenshot4482224101395131721.png'>Enteremail</a></div>
+							<div class='pre'><a href='./screenshots/screenshot1009863323913919528.png'>Enteremail</a></div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='35' class='node and pass' status='pass'><b>And</b>
 						<span class="bdd-step-name">And I click Confirm</span>
 							<div class='pre'>Subscribe is visible in the application</div>
-							<div class='pre'><a href='./screenshots/screenshot5384753283277455281.png'>SubscribeVisible</a></div>
+							<div class='pre'><a href='./screenshots/screenshot562319043086528073.png'>SubscribeVisible</a></div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='36' class='node when pass' status='pass'><b>When</b>
 						<span class="bdd-step-name">When I click Submit button in Subscribe</span>
 							<div class='pre'>Click submit button in the application</div>
-							<div class='pre'><a href='./screenshots/screenshot4756778646923989671.png'>ClickSubmit</a></div>
+							<div class='pre'><a href='./screenshots/screenshot8667638471892779068.png'>ClickSubmit</a></div>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='37' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then I verify success message You are now checked-in! in Subscribe</span>
 							<div class='pre'>See the success message in the application</div>
-							<div class='pre'><a href='./screenshots/screenshot5512545617227525921.png'>SuccessMessage</a></div>
+							<div class='pre'><a href='./screenshots/screenshot7203711583759727708.png'>SuccessMessage</a></div>
 							<div class='pre'>passed</div>
 					</li>
 				</ul>
@@ -599,13 +565,13 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 					<div class='category-heading'>
 						<span class='category-name'>@contactTag</span>
 						<span class='category-status right'>
-							<span class='label fail'>2</span>
+							<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
 							
-							<span class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 					
@@ -620,14 +586,14 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 20, 2018 09:14:15 PM</td>
+										<td>Nov 20, 2018 10:37:39 PM</td>
 										<td class='linked' test-id='1'>Contact Feature</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Nov 20, 2018 09:14:15 PM</td>
+										<td>Nov 20, 2018 10:37:39 PM</td>
 										<td class='linked' test-id='3'>Contact Feature.Customer to send the Query in Contact form and validate whether he is able to send the Query.Customer to send the Query in Contact form and validate whether he is able to send the Query</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -638,13 +604,13 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 					<div class='category-heading'>
 						<span class='category-name'>@contact</span>
 						<span class='category-status right'>
-							<span class='label fail'>1</span>
+							<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -659,9 +625,9 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 20, 2018 09:14:15 PM</td>
+										<td>Nov 20, 2018 10:37:39 PM</td>
 										<td class='linked' test-id='3'>Contact Feature.Customer to send the Query in Contact form and validate whether he is able to send the Query.Customer to send the Query in Contact form and validate whether he is able to send the Query</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -693,7 +659,7 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 20, 2018 09:16:28 PM</td>
+										<td>Nov 20, 2018 10:39:26 PM</td>
 										<td class='linked' test-id='11'>Destination Feature</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -727,7 +693,7 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 20, 2018 09:16:28 PM</td>
+										<td>Nov 20, 2018 10:39:26 PM</td>
 										<td class='linked' test-id='12'>Destination Feature.Search Destination from topleft Menu and validate the search results</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -761,12 +727,12 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 20, 2018 09:19:01 PM</td>
+										<td>Nov 20, 2018 10:40:36 PM</td>
 										<td class='linked' test-id='21'>Home Page Search Feature</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Nov 20, 2018 09:19:01 PM</td>
+										<td>Nov 20, 2018 10:40:36 PM</td>
 										<td class='linked' test-id='23'>Home Page Search Feature.Search Destination in Search Icon and validate the results.Search Destination in Search Icon and validate the results</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -800,7 +766,7 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 20, 2018 09:19:01 PM</td>
+										<td>Nov 20, 2018 10:40:36 PM</td>
 										<td class='linked' test-id='23'>Home Page Search Feature.Search Destination in Search Icon and validate the results.Search Destination in Search Icon and validate the results</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -834,12 +800,12 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 20, 2018 09:20:56 PM</td>
+										<td>Nov 20, 2018 10:41:13 PM</td>
 										<td class='linked' test-id='29'>Subscribe Feature</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Nov 20, 2018 09:20:56 PM</td>
+										<td>Nov 20, 2018 10:41:13 PM</td>
 										<td class='linked' test-id='31'>Subscribe Feature.Subscribe for NewsLetter and validate the success message.Subscribe for NewsLetter and validate the success message</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -873,7 +839,7 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 20, 2018 09:20:56 PM</td>
+										<td>Nov 20, 2018 10:41:13 PM</td>
 										<td class='linked' test-id='31'>Subscribe Feature.Subscribe for NewsLetter and validate the success message.Subscribe for NewsLetter and validate the success message</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -922,14 +888,13 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
                             <div class='author-heading'>
                                 <span class='author-name'>Laddushashavali</span>
                                 <span class='author-status right'>
-                                        <span class='label pass'>3</span>
-                                        <span class='label fail'>1</span>
+                                        <span class='label pass'>4</span>
 						        </span>
                             </div>
                             <div class='author-content hide'>
                                 <div class='author-status-counts'>
-                                    <span class='label green accent-4 white-text'>Passed: 3</span>
-                                    <span class='label red lighten-1 white-text'>Failed: 1</span>
+                                    <span class='label green accent-4 white-text'>Passed: 4</span>
+                                    
                                     
                                 </div>
 
@@ -944,22 +909,22 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Nov 20, 2018 09:14:15 PM</td>
+                                                <td>Nov 20, 2018 10:37:39 PM</td>
                                                 <td class='linked' test-id='3'>Contact Feature.Customer to send the Query in Contact form and validate whether he is able to send the Query.Customer to send the Query in Contact form and validate whether he is able to send the Query</td>
-                                                <td><span class='test-status fail'>fail</span></td>
+                                                <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Nov 20, 2018 09:16:28 PM</td>
+                                                <td>Nov 20, 2018 10:39:26 PM</td>
                                                 <td class='linked' test-id='12'>Destination Feature.Search Destination from topleft Menu and validate the search results</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Nov 20, 2018 09:19:01 PM</td>
+                                                <td>Nov 20, 2018 10:40:36 PM</td>
                                                 <td class='linked' test-id='23'>Home Page Search Feature.Search Destination in Search Icon and validate the results.Search Destination in Search Icon and validate the results</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Nov 20, 2018 09:20:56 PM</td>
+                                                <td>Nov 20, 2018 10:41:13 PM</td>
                                                 <td class='linked' test-id='31'>Subscribe Feature.Subscribe for NewsLetter and validate the success message.Subscribe for NewsLetter and validate the success message</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
@@ -976,95 +941,6 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
     <div class='subview-right left'>
         <div class='view-summary'>
             <h5 class='author-name'></h5>
-        </div>
-    </div>
-</div>
-<div id='exception-view' class='view hide'>
-
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Exceptions</h3>
-                <ul id='exception-collection' class='exception-collection'>
-
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>Nov 20, 2018 09:15:59 PM</td>
-                                                        <td class='linked' test-id='7'>Contact Feature.Customer to send the Query in Contact form and validate whether he is able to send the Query.Customer to send the Query in Contact form and validate whether he is able to send the Query.When I enter This is a test message,LADDU SHASHAVALI,shasha.intell@gmail.com data</td>
-                                                        <td><pre><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //textarea[@class='contact-msg']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'EPPLGDAW0090', ip: '192.168.0.129', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 63.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 24364, moz:profile: C:\Users\Laddu_Shashavali\A..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
-*** Element info: {Using=xpath, value=//textarea[@class='contact-msg']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy20.clear(Unknown Source)
-	at com.test.trivago.pageObjects.Contact.enterDataContactDetails(Contact.java:69)
-	at com.test.trivago.stepdefinitions.ContactSteps.i_enter_and_data(ContactSteps.java:55)
-	at ✽.When I enter This is a test message,LADDU SHASHAVALI,shasha.intell@gmail.com data(Contact.feature:9)
-</pre></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='exception-name'></h5>
         </div>
     </div>
 </div>
@@ -1095,19 +971,19 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Nov 20, 2018 09:14:14 PM</div>
+					<div class='panel-lead'>Nov 20, 2018 10:37:39 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Nov 20, 2018 09:23:09 PM</div>
+			 		<div class='panel-lead'>Nov 20, 2018 10:42:14 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 8m 54s+572ms</div>
+					<div class='panel-lead'>0h 4m 35s+643ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -1144,20 +1020,20 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 						</tr>
 						<tr>
 							<td>@contactTag</td>
-							<td>0</td>
 							<td>2</td>
 							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									100%
 							</td>
 						</tr>
 						<tr>
 							<td>@contact</td>
-							<td>0</td>
 							<td>1</td>
 							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									100%
 							</td>
 						</tr>
 						<tr>
@@ -1236,31 +1112,31 @@ Session ID: 0b0ba131-dad8-416f-8d47-70fe817556bc
 
 		<script>
 			var statusGroup = {
-				passParent: 3,
-				failParent: 1,
+				passParent: 4,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
-				passChild: 3,
-				failChild: 1,
+				passChild: 4,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 1,
+				exceptionsChild: 0,
 				
-				passGrandChild: 22,
-				failGrandChild: 1,
+				passGrandChild: 26,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 3,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 4,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		
