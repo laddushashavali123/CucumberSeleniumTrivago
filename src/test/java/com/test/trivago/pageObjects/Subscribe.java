@@ -9,6 +9,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import static com.test.trivago.pageObjects.BaseDriver.scrollintoviewAndClickElement;
 import static com.test.trivago.pageObjects.BaseDriver.scrollintoviewElement;
 
 public class Subscribe {
@@ -33,59 +34,37 @@ public class Subscribe {
         PageFactory.initElements(driver, this);
     }
 
-    public void fieldsVisible() {
-        try {
-            scrollintoviewElement(driver, confirm);
-            scrollintoviewElement(driver, email);
-            Assert.assertTrue((confirm.isDisplayed() && confirm.isEnabled())
-                            && (email.isDisplayed() && email.isEnabled()),
-                    "Confirm button , email Button");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void fieldsVisible() throws Exception {
+        scrollintoviewElement(driver, confirm);
+        scrollintoviewElement(driver, email);
+        Assert.assertTrue((confirm.isDisplayed() && confirm.isEnabled())
+                        && (email.isDisplayed() && email.isEnabled()),
+                "Confirm button , email Button");
     }
 
-    public void clickConfirm() {
+    public void clickConfirm() throws Exception {
         //Click confirm
-        try {
-            JavascriptExecutor executor = (JavascriptExecutor) driver;
-            executor.executeScript("arguments[0].scrollIntoView(true);", confirm);
-            executor.executeScript("arguments[0].click();", confirm);
-        } catch (Exception e) {
-            Actions builder = new Actions(driver);
-            builder.moveToElement(confirm).click().build().perform();
-        }
-
+        scrollintoviewAndClickElement(driver,confirm);
     }
+
     //Enter email
-    public void enteremail(String mail) {
+    public void enteremail(String mail) throws Exception {
         email.clear();
         //Click search
         email.sendKeys(mail.trim());
     }
+
     //Click submit
-    public void clickSubmit() {
-
-        JavascriptExecutor executor = (JavascriptExecutor) driver;
-        try {
-            scrollintoviewElement(driver, submit);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        executor.executeScript("arguments[0].click();", submit);
-
+    public void clickSubmit() throws Exception {
+        //Cick submit
+        scrollintoviewAndClickElement(driver, submit);
     }
 
     //Verify message 'You are now checked-in!'
-    public Boolean verifyMessage(String message) {
+    public Boolean verifyMessage(String message) throws Exception {
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("window.scrollBy(0,-700)", "");
-        try {
-            scrollintoviewElement(driver, feedbackMsg);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        scrollintoviewElement(driver, feedbackMsg);
         return feedbackMsg.getText().toUpperCase().trim().equals(message.toUpperCase().trim());
     }
 }

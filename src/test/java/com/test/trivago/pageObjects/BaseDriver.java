@@ -145,9 +145,18 @@ public class BaseDriver {
         ((JavascriptExecutor) webdriver).executeScript("arguments[0].scrollIntoView(true);", webElement);
         Thread.sleep(500);
         hightlightElement(webdriver, webElement);
-       //
     }
 
+    //Scroll into view
+    public static void scrollintoviewAndClickElement(WebDriver webdriver, WebElement webElement) throws Exception {
+        ((JavascriptExecutor) webdriver).executeScript("arguments[0].scrollIntoView(true);", webElement);
+        Thread.sleep(500);
+        //Highlight Element
+        hightlightElement(webdriver, webElement);
+        //Click on Element
+        ((JavascriptExecutor) webdriver).executeScript("arguments[0].click();", webElement);
+        implicitWait(driver);
+    }
     //Highlight element
     public static void hightlightElement(WebDriver webdriver, WebElement webElement) throws InterruptedException {
         // draw a border around the found element
