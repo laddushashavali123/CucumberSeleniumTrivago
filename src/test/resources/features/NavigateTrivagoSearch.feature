@@ -1,8 +1,8 @@
 	@destinationTag
-Feature: Search Destination Feature,click on the option and navigate to trivago search portal
+Feature:Search Destination from topleft Menu and validate the search results
 
   @navigateSearch
-  Scenario Outline: Search Destination from topleft Menu and validate the search results
+  Scenario Outline: Search Destination Feature,click on the option and navigate to trivago search portal
   Given topleftIcon is visible
   When I click topleftIcon
   Then I see Destination menu
