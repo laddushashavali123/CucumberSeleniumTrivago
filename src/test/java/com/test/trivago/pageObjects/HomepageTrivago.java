@@ -1,7 +1,10 @@
 package com.test.trivago.pageObjects;
 
 import com.test.trivago.listener.Reporter;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -11,25 +14,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.test.trivago.pageObjects.BaseDriver.*;
-import static com.test.trivago.pageObjects.BaseDriver.scrollintoviewAndClickElement;
 
 
-public class Destination {
-    private String pageTitle = "";
+public class HomepageTrivago {
     private WebDriver driver;
     //Locators
-
-    //Apply as Developer Button
-    @FindBy(how = How.XPATH, using = "//*[@class='nav-icon']")
-    public WebElement topLeftIcon;
-    @FindBy(how = How.XPATH, using = "//*[contains(@data-src,'taxonomy-united-states-west')]")
-    public WebElement destinationMenuItem;
-    @FindBy(how = How.XPATH, using = "//*[@class='menu-container']//*[(@class='theme-menu arts-and-culture' and text()='Arts & Culture')]")
-    public WebElement bestUsCities;
-    @FindBy(how = How.XPATH, using = "//*[@class='block post-terms-links']")
-    public WebElement titleDetailsPage;
-    @FindBy(how = How.XPATH, using = "//*[contains(text(),'See it on trivago')]")
-    public WebElement seeItTrivago;
+    @FindBy(how = How.XPATH, using = "//*[text()='trivago']")
+    public WebElement trivagoLink;
+    @FindBy(how = How.XPATH, using = "//*[@class='input horus__querytext']")
+    public WebElement dataField;
+    @FindBy(how = How.NAME, using = "search-submit")
+    public WebElement submit;
     @FindBy(how = How.XPATH, using = "//*[@class='horus-btn-search__icon icon-ic icon-contain icon-bg-icn_search_light']")
     public WebElement searchTrivagoButton;
     @FindBy(how = How.XPATH, using = "//*[@name='sQuery']")
@@ -38,124 +33,47 @@ public class Destination {
     public WebElement searchTrivagoCheckout;
     @FindBy(how = How.XPATH, using = "//*[@class='icon-ic btn-horus__icon btn-horus__icon--checkin icon-center']")
     public WebElement searchTrivagoCheckin;
-    @FindBy(how = How.XPATH, using = "//*[@class='df_overlay']//*[@class='df_overlay_title']//*[@class='df_overlay_close_wrap overlay__close']//*[@class='icon-ic icon-contain fill-maincolor-04-light']")
-    public WebElement checkinClose;
-
 
     //Constructor
-    public Destination(WebDriver driver) {
+    public HomepageTrivago(WebDriver driver) {
         this.driver = driver;
         //Initialise Elements
         PageFactory.initElements(driver, this);
     }
 
-    public void clickIcon() throws Exception {
-        //Click on Icon
-        scrollintoviewAndClickElement(driver, topLeftIcon);
+    public void trivagoVisible() throws Exception {
+        //Contact is visible
+        scrollintoviewElement(driver, trivagoLink);
+        Reporter.addStepLog("Contact link is visible and clickable in the application");
     }
 
-    public void topLeftIconVisible() throws Exception {
-        scrollintoviewElement(driver, topLeftIcon);
-        Assert.assertTrue((topLeftIcon.isDisplayed() && topLeftIcon.isEnabled()),
-                "topLeftIcon menu is not visible and not Enabled");
-
+    public void clickTrivago() throws Exception {
+        //Click contact
+        scrollintoviewAndClickElement(driver, trivagoLink);
+        //Switch to the new window
+        switchWindow(driver);
     }
 
-    public void verifyMenu() throws Exception {
-        scrollintoviewElement(driver, destinationMenuItem);
-        Assert.assertTrue((destinationMenuItem.isDisplayed() && destinationMenuItem.isEnabled()),
-                "Destination menu Item is not visible and not Enabled");
+    public void verifyFields() throws Exception {
+        scrollintoviewElement(driver, dataField);
+        scrollintoviewElement(driver, submit);
+
+        Assert.assertTrue((dataField.isDisplayed() && dataField.isEnabled())
+                        && (submit.isDisplayed() && submit.isEnabled()),
+                "Data field and Submit button are not visible");
     }
 
-    public void clickDestinationMenu() throws Exception {
-        //Click on Destination Menu
-        scrollintoviewAndClickElement(driver, destinationMenuItem);
+    public void enterData(String data) throws Exception {
+        scrollintoviewElement(driver, dataField);
+        //Clear the field
+        dataField.clear();
+        //Enter message
+        dataField.sendKeys(data);
     }
 
-    public void clickMenuItem() throws Exception {
-        //Click on Menu item
-        scrollintoviewAndClickElement(driver, destinationMenuItem);
-    }
-
-    public void clickSubMenuItem() throws Exception {
-        //Click Submenu item
-        scrollintoviewAndClickElement(driver, bestUsCities);
-    }
-
-    public void viewSubMenuItem() throws Exception {
-        scrollintoviewElement(driver, bestUsCities);
-        Assert.assertTrue((bestUsCities.isDisplayed() && bestUsCities.isEnabled()),
-                "Destination sub menu Item is not visible and not Enabled");
-
-    }
-
-    public void seeResults() throws Exception {
-        List<WebElement> titles = driver.findElements(By.xpath("//*[@class='post-main-title title']"));
-        for (int i = 0; i < titles.size(); i++) {
-            WebElement element = driver.findElement(By.xpath("(//*[@class='post-main-title title']/span)[" + (i + 1) + "]"));
-            JavascriptExecutor executor = (JavascriptExecutor) driver;
-            executor.executeScript("arguments[0].scrollIntoView(true);", element);
-            Thread.sleep(500);
-            Assert.assertTrue((element.isDisplayed()),
-                    "Destination menu results are not visible");
-            Assert.assertNotNull(element.getText(), "Text of the Image in search results is not displayed");
-        }
-
-    }
-
-    public void validateResults() throws Exception {
-        List<WebElement> titles = driver.findElements(By.xpath("//*[@class='post-main-title title']"));
-        for (int i = 0; i < titles.size(); i++) {
-            WebElement element = driver.findElement(By.xpath("(//*[@class='post-main-title title']/span)[" + (i + 1) + "]"));
-            scrollintoviewElement(driver, element);
-            Thread.sleep(500);
-            Assert.assertTrue((element.isDisplayed()),
-                    "Destination menu results are not visible");
-            Assert.assertNotNull(element.getText(), "Text of the Image in search results is not displayed");
-        }
-
-    }
-
-    //* Click Result and navigate to trivago page*/
-    public void clickSearchResult(String searchResult) throws Exception {
-        List<WebElement> lstResults = driver.findElements(By.xpath("//*[@class='post-main-title title']//*[@class='article-card post-bottom-related-articles']"));
-        for (int i = 0; i < lstResults.size(); i++) {
-            WebElement webElement = driver.findElement(By.xpath("(//*[@class='post-main-title title']//*[@class='article-card post-bottom-related-articles'])[" + (i + 1) + "]"));
-            //  if (webElement.getText().trim().toUpperCase().equals(searchResult.toUpperCase().trim())) {
-            if (scrollUpElement(driver, webElement)) {
-                scrollintoviewAndClickElement(driver, webElement);
-                break;
-            }
-        }
-        scrollintoviewElement(driver, titleDetailsPage);
-        Assert.assertTrue((titleDetailsPage.isDisplayed()),
-                "Details page is not visible");
-        Assert.assertNotNull((titleDetailsPage.getText()),
-                "Title text is not available in the details page");
-    }
-
-    public void detailsPage() throws Exception {
-        Thread.sleep(500);
-        Assert.assertTrue((titleDetailsPage.isDisplayed()),
-                "Details page is not visible");
-        Assert.assertNotNull((titleDetailsPage.getText()),
-                "Title text is not available in the details page");
-    }
-
-    public void clickSeeitOnTrivago() throws Exception {
-        //Click on See it On trivago
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", seeItTrivago);
-        Thread.sleep(500);
-        //Highlight Element
-        hightlightElement(driver, seeItTrivago);
-        //Click on Element
-        System.out.print("URL is: " + seeItTrivago.getAttribute("href").trim());
-        driver.navigate().to(seeItTrivago.getAttribute("href").trim());
-        implicitWait(driver);
-        Thread.sleep(1000);
-        pageTitle = driver.getTitle();
-        //Switch to new window
-        switchWindow(driver, pageTitle);
+    public void clickSearch() throws Exception {
+        //Click confirm
+        scrollintoviewAndClickElement(driver, submit);
     }
 
     public void navigateTrivagoSearchPage() throws Exception {
@@ -178,15 +96,16 @@ public class Destination {
                     "Date & Time selection Calendar is not visible");
             Assert.assertNotNull((webElement.getText()),
                     (webElement.getText()) + " is not available in the trivago page");
-            if (isElementPresent(webElement)) {
+           /* if (isElementPresent(webElement)) {
                 Thread.sleep(2000);
                 webElement.click();
                 clickClose=webElement;
-            }
+            }*/
             Reporter.addStepLog(webElement.getText() + " is available in the trivago page");
         }
 
-        clickClose.click();Thread.sleep(1000);
+        //clickClose.click();
+        Thread.sleep(1000);
         WebElement srchText = driver.findElement(By.xpath("//*[@class='input horus__querytext']"));
         scrollintoviewElement(driver, srchText);
         Assert.assertTrue((searchTrivagoButton.isDisplayed()),
